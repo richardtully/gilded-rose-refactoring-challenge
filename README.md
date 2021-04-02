@@ -55,3 +55,14 @@ If your programming language doesn't have an easy way to add a command-line inte
 I analysed this repo according to the clean code standards on [Better Code Hub](https://bettercodehub.com) just to get an independent opinion of how bad the code is. Perhaps unsurprisingly, the compliance score is low!
 
 [![BCH compliance](https://bettercodehub.com/edge/badge/emilybache/GildedRose-Refactoring-Kata?branch=master)](https://bettercodehub.com/) 
+
+#### Standard
+- [ ] Meets the spec
+- [ ] Developed test-first - tests written to cover existing functionality.
+- [ ] Passes tests and code is linted
+- [ ] Methods are extracted one by one from the nested `if` statement per item type
+- [ ] Classes that encapsulate item update procedures are extracted per item type
+- [ ] Shop#updateQuality() has no `if() {}` statements
+
+#### Extended
+- [ ] See a coach!
