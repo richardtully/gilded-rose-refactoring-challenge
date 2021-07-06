@@ -29,8 +29,8 @@ describe("Gilded Rose", function() {
     expect(dexVest.sellIn).toEqual(9)
     expect(dexVest.quality).toEqual(19)
 
-    expect(agedBrie.sellIn).toEqual(1)
-    expect(agedBrie.quality).toEqual(1)
+    expect(updatedItems[1].sellIn).toEqual(1)
+    expect(updatedItems[1].quality).toEqual(1)
 
     expect(elixirMongoose.sellIn).toEqual(4)
     expect(elixirMongoose.quality).toEqual(6)
@@ -77,8 +77,8 @@ describe("Gilded Rose", function() {
     expect(dexVest.sellIn).toEqual(-20)
     expect(dexVest.quality).toEqual(0)
 
-    expect(agedBrie.sellIn).toEqual(-28)
-    expect(agedBrie.quality).toEqual(50)
+    expect(updatedItems[1].sellIn).toEqual(-28)
+    expect(updatedItems[1].quality).toEqual(50)
 
     expect(elixirMongoose.sellIn).toEqual(-25)
     expect(elixirMongoose.quality).toEqual(0)

@@ -1,6 +1,14 @@
+const AgedBrie = require("./agedBrie.js")
+
 class Shop {
   constructor(items=[]){
-    this.items = items;
+    this.items = items.map(item => {
+      if (item.name === "Aged Brie") {
+        return new AgedBrie(item)
+      } else {
+        return item
+      }
+    });
   }
 
   updateBackstagePass(item) {
@@ -9,12 +17,6 @@ class Shop {
     if (item.sellIn < 11 && item.quality < 50) { item.quality++ }
     if (item.sellIn < 6 && item.quality < 50) { item.quality++ }
     if (item.sellIn < 0) { item.quality = 0 }
-  }
-
-  updateAgedBrie(item) {
-    item.sellIn--
-    if (item.quality < 50) { item.quality++ }
-    if (item.sellIn < 0 && item.quality < 50) { item.quality++ }
   }
 
   updateConjured(item) {
@@ -31,7 +33,7 @@ class Shop {
   updateQuality() {
     for (var i = 0; i < this.items.length; i++) {
       if (this.items[i].name === 'Conjured Mana Cake') { this.updateConjured(this.items[i]) }
-      if (this.items[i].name === 'Aged Brie') { this.updateAgedBrie(this.items[i]) }
+      if (this.items[i].name === 'Aged Brie') { this.items[i].update() }
       if (this.items[i].name === 'Backstage passes to a TAFKAL80ETC concert') { this.updateBackstagePass(this.items[i]) }
       if (this.items[i].name != 'Sulfuras, Hand of Ragnaros' && this.items[i].name != 'Aged Brie' && this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert' && this.items[i].name !== 'Conjured Mana Cake') {
         if (this.items[i].quality > 0) { this.items[i].quality--; }
