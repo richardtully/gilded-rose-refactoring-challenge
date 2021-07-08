@@ -15,6 +15,23 @@ we can begin selling a new category of items. First an introduction to our syste
 
 Pretty simple, right? Well this is where it gets interesting:
 
+
+Aged Brie
+sulfuras
+backstage passes
+conjured items
+
+[item,sellBy,Quality ]
+
+if sellby = 0 , qual deg x2
+0 =< qual =< 50
+qual -= 1 each day (assumption)
+
+
+
+
+
+
 	- Once the sell by date has passed, Quality degrades twice as fast
 	- The Quality of an item is never negative
 	- "Aged Brie" actually increases in Quality the older it gets

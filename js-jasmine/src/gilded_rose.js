@@ -1,15 +1,32 @@
-class Item {
+class Item {   // don't change this class!
   constructor(name, sellIn, quality){
     this.name = name;
-    this.sellIn = sellIn;
+    this.sellIn = sellIn; 
     this.quality = quality;
   }
 }
 
 class Shop {
   constructor(items=[]){
-    this.items = items;
+    this.items = items;// don't change this property!
   }
+
+  // Aged Brie
+  // sulfuras
+  // backstage passes
+  // conjured items
+  
+  // [item,sellBy,Quality ]
+  
+  // if sellby = 0 , qual deg x2
+  // 0 =< qual =< 50
+  // qual -= 1 each day (assumption)
+  
+// use switch instead of nested if statements
+// seperate normal item decay from specail item decay
+//Create more methods
+
+
   updateQuality() {
     for (var i = 0; i < this.items.length; i++) {
       if (this.items[i].name != 'Aged Brie' && this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
@@ -64,3 +81,7 @@ module.exports = {
   Item,
   Shop
 }
+
+
+
+
